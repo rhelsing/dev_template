@@ -15,3 +15,11 @@ devbox shell
 
 "bundle install" in dexbox
 and yarn install
+
+
+RUN expect -c "\
+  spawn bash devbox; \
+  expect \"Install devbox to /usr/local/bin (requires sudo)? \[Y/n\]\"; \
+  send \"Y\r\"; \
+  expect eof; \
+"
