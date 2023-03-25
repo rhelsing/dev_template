@@ -2,7 +2,7 @@
   "packages": ["ruby_3_1", "python39", "nodejs-slim-14_x", "bundler", "yarn", "postgresql"],
   "shell": {
     "init_hook": [
-      "echo 'I'm run first time only?",
+      "echo 'I'm run each time shell is started."
     ]
   },
   "nixpkgs": {
