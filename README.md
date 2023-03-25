@@ -1,9 +1,9 @@
-#Dev Template
+# Dev Template
 
 curl -fsSL https://get.jetpack.io/devbox | bash
 
-https://github.com/jetpack-io/devbox
-
+# codespace
+bash devbox_install
 devbox shell
 
 
@@ -15,11 +15,3 @@ devbox shell
 
 "bundle install" in dexbox
 and yarn install
-
-
-RUN expect -c "\
-  spawn bash devbox; \
-  expect \"Install devbox to /usr/local/bin (requires sudo)? \[Y/n\]\"; \
-  send \"Y\r\"; \
-  expect eof; \
-"
