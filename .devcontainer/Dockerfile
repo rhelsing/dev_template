@@ -1,7 +1,7 @@
 FROM ghcr.io/railwayapp/nixpacks:latest
 
 # Install expect
-RUN nix-env -iA nixpkgs.expect
+RUN apt-get install expect -y
 
 # Download the devbox script
 RUN curl -fsSL https://get.jetpack.io/devbox -o devbox
