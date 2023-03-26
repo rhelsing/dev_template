@@ -23,3 +23,8 @@ devbox services start postgresql
 
 just rails and postgres first
 be able to deploy w/ redis, postrgres, devise, yarn and s3 active storage configured and ready
+
+
+[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/template/Vc8Vyu?referralCode=VR7g44)
+
+https://railway.app/template/Vc8Vyu?referralCode=VR7g44
