@@ -15,3 +15,10 @@ devbox shell
 
 "bundle install" in dexbox
 and yarn install
+
+
+# RAILS version
+
+
+just rails and postgres first
+be able to deploy w/ redis, postrgres, devise, yarn and s3 active storage configured and ready
