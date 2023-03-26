@@ -15,6 +15,7 @@ devbox shell
 
 "bundle install" in dexbox
 and yarn install
+devbox services start postgresql
 
 
 # RAILS version
