@@ -19,11 +19,13 @@ devbox services start postgresql
 
 
 # RAILS NEXT
+sudo access hardcode array, singleton config, admins access grant
 install simple form, devise, example of background job and action_cable, file storage, tinymce w/ file upload
 jquery and tailwind
 redis integration kredis?
 util.js
 util.rb
+tailwind jquery component patterns w. data attributes or x-{function}
 
 
 [![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/template/Vc8Vyu?referralCode=VR7g44)
