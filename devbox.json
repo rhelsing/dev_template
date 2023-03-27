@@ -1,8 +1,14 @@
 {
-  "packages": ["ruby_3_1", "python39", "nodejs-slim-14_x", "bundler", "yarn", "postgresql"],
+  "packages": ["elixir", "bash", "postgresql"],
   "shell": {
     "init_hook": [
-      "echo 'I'm run each time shell is started."
+      "mkdir -p .nix-mix",
+      "mkdir -p .nix-hex",
+      "export MIX_HOME=$PWD/.nix-mix",
+      "export HEX_HOME=$PWD/.nix-hex",
+      "export ERL_AFLAGS='-kernel shell_history enabled'",
+      "mix local.hex --force",
+      "mix local.rebar --force"
     ]
   },
   "nixpkgs": {

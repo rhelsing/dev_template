@@ -17,3 +17,6 @@ devbox shell
 and yarn install
 
 #Pheonix install
+
+mix archive.install hex phx_new
+mix phx.new .
