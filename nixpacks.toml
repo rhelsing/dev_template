@@ -7,6 +7,7 @@ nixPkgs = ["..."]
 
 [variables]
 SECRET_KEY_BASE="ADD"
+NIXPACKS_ELIXIR_VERSION="1.14"
 
 [phases.build]
 cmds = ["echo start build", "...", "mix compile", "mix assets.deploy", "echo done build"]
