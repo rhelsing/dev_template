@@ -1,16 +1,15 @@
 buildImage = 'ghcr.io/railwayapp/nixpacks:latest'
 
 [phases.setup]
-providers = ["...", "ruby"]
+providers = ["...", "elixir"]
 aptPkgs = ["..."]
-nixPkgs = ["...", "python39", "nodejs-slim-14_x"]
+nixPkgs = ["..."]
 
 [variables]
-NODE_VERSION="14"
 SECRET_KEY_BASE="ADD"
 
 [phases.build]
-cmds = ["echo start build", "...", "bundle exec rake db:create db:migrate", "echo done build"]
+cmds = ["echo start build", "...", "mix compile", "mix assets.deploy", "echo done build"]
 
 [start]
-cmds = ["echo server start", "bundle exec puma -p $PORT --environment=production"]
+cmds = ["echo server start", "mix phx.server"]
