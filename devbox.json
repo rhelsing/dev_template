@@ -1,5 +1,8 @@
 {
-  "packages": ["elixir", "bash", "postgresql"],
+  "packages": [
+    "elixir",
+    "bash"
+  ],
   "shell": {
     "init_hook": [
       "mkdir -p .nix-mix",
