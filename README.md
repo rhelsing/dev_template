@@ -15,3 +15,5 @@ devbox shell
 
 "bundle install" in dexbox
 and yarn install
+
+#Pheonix install
