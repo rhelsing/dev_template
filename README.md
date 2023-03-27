@@ -20,7 +20,7 @@ devbox services start postgresql
 
 # RAILS NEXT
 sudo access hardcode array, singleton config, admins access grant
-install simple form, devise, example of background job and action_cable, file storage, tinymce w/ file upload
+install simple form, devise, example of background job and action_cable, file storage, tinymce w/ file upload, ace editors easy
 jquery and tailwind
 redis integration kredis?
 util.js
