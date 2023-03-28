@@ -23,6 +23,10 @@ You can also run your app inside IEx (Interactive Elixir) as:
     $ iex -S mix phx.server
 
 
+exit) an exception was raised:
+** (ArgumentError) cookie store expects conn.secret_key_base to be at least 64 bytes
+
+    
 #Pheonix install
 
 #postgres

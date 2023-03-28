@@ -6,7 +6,7 @@ aptPkgs = ["..."]
 nixPkgs = ["..."]
 
 [variables]
-SECRET_KEY_BASE="ADD"
+SECRET_KEY_BASE="3fb617c326a67789d22ec2a7b8bf9ce4b9c1e0a92260adafcfe6e457ab836f5f6c25b9591633ae5a9c4aff52c2bbbae3bdcf41f856f41a97c06a9f6eb40163f7"
 NIXPACKS_ELIXIR_VERSION="1.14"
 
 [phases.build]
