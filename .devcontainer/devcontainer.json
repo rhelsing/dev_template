@@ -1,10 +1,34 @@
 {
-    "name": "Dev Container",
-    "dockerFile": "Dockerfile",
-    "settings": {
-        "terminal.integrated.shell.linux": "/bin/bash"
-    },
-    "extensions": [
-        "vscodevim.vim"
-    ]
+  "name": "Dev Container",
+  "service": "app",
+  "dockerComposeFile": "docker-compose.yml",
+  "build": {
+    "args": {
+      "USER_UID": "${localEnv:USER_UID}",
+      "USER_GID": "${localEnv:USER_GID}"
+    }
+  },
+
+  "runArgs": [
+    "--security-opt", "label=disable"
+  ],
+
+  "mounts": [
+    "source=nix-devcontainer-ruby233_nix,target=/nix,type=volume"
+  ],
+
+  "userEnvProbe": "loginShell",
+  "overrideCommand": false,
+  "updateRemoteUserUID": false,
+  "extensions": [
+    "vscodevim.vim",
+    "fsevenm.run-it-on",
+    "ms-azuretools.vscode-docker",
+    "yzhang.markdown-all-in-one"
+  ],
+  "forwardPorts": [3000],
+  "settings": {
+    "terminal.integrated.shell.linux": "/bin/bash",
+  }
+
 }

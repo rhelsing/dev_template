@@ -26,7 +26,7 @@ You can also run your app inside IEx (Interactive Elixir) as:
 exit) an exception was raised:
 ** (ArgumentError) cookie store expects conn.secret_key_base to be at least 64 bytes
 
-    
+
 #Pheonix install
 
 #postgres
@@ -36,3 +36,11 @@ sudo service postgresql start
 sudo -u postgres createuser --interactive
 sudo -u postgres createdb [database_name]
 sudo -u postgres psql
+
+
+* look at accord - postgres and redis service/ link up
+
+
+<%if ENV['DATABASE_URL']%>
+  url: <%= ENV['DATABASE_URL'] %>
+  <%end%>
