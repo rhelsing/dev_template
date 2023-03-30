@@ -1,10 +1,37 @@
 {
-    "name": "Dev Container",
-    "dockerFile": "Dockerfile",
-    "settings": {
-        "terminal.integrated.shell.linux": "/bin/bash"
-    },
-    "extensions": [
-        "vscodevim.vim"
-    ]
+  "name": "dev_container",
+  "service": "app",
+  "dockerComposeFile": "docker-compose.yml",
+  "build": {
+    "args": {
+      "USER_UID": "${localEnv:USER_UID}",
+      "USER_GID": "${localEnv:USER_GID}"
+    }
+  },
+  "hostRequirements": {
+   "cpus": 8,
+   "memory": "8gb",
+   "storage": "16gb"
+  },
+  "runArgs": [
+    "--security-opt", "label=disable"
+  ],
+  "mounts": [
+    "source=dev_container_nix,target=/nix,type=volume"
+  ],
+  "postStartCommand": "${containerWorkspaceFolder}/.devcontainer/setup.sh",
+  "userEnvProbe": "loginShell",
+  "overrideCommand": false,
+  "updateRemoteUserUID": false,
+  "extensions": [
+    "vscodevim.vim",
+    "fsevenm.run-it-on",
+    "ms-azuretools.vscode-docker",
+    "yzhang.markdown-all-in-one"
+  ],
+  "forwardPorts": [4000],
+  "settings": {
+    "terminal.integrated.shell.linux": "/bin/bash",
+  }
+
 }
