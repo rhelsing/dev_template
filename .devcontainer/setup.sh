@@ -1,3 +1,3 @@
 #!/bin/bash
 
-../devbox_install && devbox shell
+/workspaces/dev_template/devbox_install && devbox shell
