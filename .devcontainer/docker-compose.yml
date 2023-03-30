@@ -14,6 +14,21 @@ services:
     volumes:
       - postgresql-data:/var/lib/postgresql/data
 
+  db-admin-adminer:
+    container_name: dbadmin-adminer
+    depends_on:
+      database-postgres:
+        condition: service_started
+    env_file:
+    - environment.env
+    image: adminer:latest
+  localstack:
+    image: localstack/localstack
+    environment:
+      - DEBUG=${DEBUG-}
+      - LAMBDA_EXECUTOR=${LAMBDA_EXECUTOR-}
+      - DOCKER_HOST=unix:///var/run/docker.sock
+
   app:
     volumes:
       - .:/workspace:cached
