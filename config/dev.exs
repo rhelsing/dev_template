@@ -4,6 +4,7 @@ import Config
 config :dev_template, DevTemplate.Repo,
   stacktrace: true,
   adapter: Ecto.Adapters.Postgres,
+  database: postgres
   show_sensitive_data_on_connection_error: true,
   url: System.get_env("DATABASE_URL"),
   pool_size: 10

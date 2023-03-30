@@ -29,7 +29,7 @@
     "ms-azuretools.vscode-docker",
     "yzhang.markdown-all-in-one"
   ],
-  "forwardPorts": [3000],
+  "forwardPorts": [4000],
   "settings": {
     "terminal.integrated.shell.linux": "/bin/bash",
   }
