@@ -11,7 +11,9 @@
       "export HEX_HOME=$PWD/.nix-hex",
       "export ERL_AFLAGS='-kernel shell_history enabled'",
       "mix local.hex --force",
-      "mix local.rebar --force"
+      "mix local.rebar --force",
+      "mix deps.get && mix deps.compile",
+      "mix ecto.create"
     ]
   },
   "nixpkgs": {

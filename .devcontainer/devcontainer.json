@@ -16,10 +16,10 @@
   "runArgs": [
     "--security-opt", "label=disable"
   ],
-
   "mounts": [
     "source=dev_container_nix,target=/nix,type=volume"
   ],
+  "postStartCommand": "${containerWorkspaceFolder}/.devcontainer/setup.sh",
   "userEnvProbe": "loginShell",
   "overrideCommand": false,
   "updateRemoteUserUID": false,
