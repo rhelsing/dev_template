@@ -8,7 +8,11 @@
       "USER_GID": "${localEnv:USER_GID}"
     }
   },
-
+  "hostRequirements": {
+   "cpus": 8,
+   "memory": "8gb",
+   "storage": "16gb"
+  },
   "runArgs": [
     "--security-opt", "label=disable"
   ],
