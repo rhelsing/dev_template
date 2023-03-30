@@ -30,8 +30,6 @@ services:
       - DOCKER_HOST=unix:///var/run/docker.sock
 
   app:
-    environment:
-      PRELOAD_EXTENSIONS: "arrterian.nix-env-selector"
     volumes:
       - .:/workspace:cached
       - nix:/nix

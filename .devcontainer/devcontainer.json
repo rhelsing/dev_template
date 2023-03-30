@@ -1,5 +1,5 @@
 {
-  "name": "Dev Container",
+  "name": "dev_container",
   "service": "app",
   "dockerComposeFile": "docker-compose.yml",
   "build": {
@@ -14,9 +14,8 @@
   ],
 
   "mounts": [
-    "source=nix-devcontainer-ruby233_nix,target=/nix,type=volume"
+    "source=dev_container_nix,target=/nix,type=volume"
   ],
-
   "userEnvProbe": "loginShell",
   "overrideCommand": false,
   "updateRemoteUserUID": false,
