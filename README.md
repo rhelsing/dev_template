@@ -3,6 +3,10 @@
 # codespace setup - manual for now:
 
 ```bash
+
+devbox_install
+
+
 curl -fsSL https://get.jetpack.io/devbox | bash
 
 devbox shell
