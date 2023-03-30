@@ -2,7 +2,7 @@
 
 # codespace setup - manual for now:
 
-```
+```bash
 curl -fsSL https://get.jetpack.io/devbox | bash
 
 devbox shell
@@ -12,19 +12,17 @@ mix deps.get && mix deps.compile
 mix ecto.create
 ```
 
---devbox postgres has issues.. with codespaces?
 
-initdb
-createdb postgres
+# Start your Phoenix app with:
 
-Start your Phoenix app with:
-```
-    $ mix phx.server
+```bash
+mix phx.server
 ```
 
 You can also run your app inside IEx (Interactive Elixir) as:
-```
-    $ iex -S mix phx.server
+
+```bash
+iex -S mix phx.server
 
 ```
 

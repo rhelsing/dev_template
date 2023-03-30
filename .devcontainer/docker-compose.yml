@@ -35,8 +35,6 @@ services:
       - nix:/nix
     security_opt:
       - label:disable
-    env_file:
-      - environment.env
     build:
       context: ../
       dockerfile: .devcontainer/Dockerfile
