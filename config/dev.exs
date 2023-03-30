@@ -2,12 +2,10 @@ import Config
 
 # Configure your database
 config :dev_template, DevTemplate.Repo,
-  username: "postgres",
-  password: "postgres",
-  hostname: "localhost",
-  database: "dev_template_dev",
   stacktrace: true,
+  adapter: Ecto.Adapters.Postgres,
   show_sensitive_data_on_connection_error: true,
+  url: System.get_env("DATABASE_URL"),
   pool_size: 10
 
 # For development, we disable any cache and enable
